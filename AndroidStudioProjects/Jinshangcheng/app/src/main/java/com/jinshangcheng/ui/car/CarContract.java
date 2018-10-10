@@ -3,6 +3,10 @@ package com.jinshangcheng.ui.car;
 import com.jinshangcheng.base.IBasePresenter;
 import com.jinshangcheng.base.IBaseView;
 
+import java.util.HashMap;
+
+import io.reactivex.Observer;
+
 /**
  * MVP功能整合
  */
@@ -21,7 +25,7 @@ public interface CarContract {
     }
 
     interface IModel {
-        void loadCarList();
+        void loadCarList(HashMap map, Observer observer);
     }
 
 }

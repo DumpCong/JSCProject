@@ -26,9 +26,6 @@ import butterknife.Unbinder;
 public class MineFragment extends BaseFragment implements CarContract.IView {
 
 
-    Unbinder unbinder;
-
-
     private static MineFragment mineFragment;
 
     private CarContract.IPresenter mPresenter;

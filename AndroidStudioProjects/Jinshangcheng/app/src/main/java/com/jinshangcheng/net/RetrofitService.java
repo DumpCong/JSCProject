@@ -17,7 +17,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
  */
 public class RetrofitService {
 
-    private static final String HOST = "http://www.ewowang.com";
+    private static final String HOST = "http://ewowang.polyhome.net";
 
     private static final String BASE_URL = HOST + "/ewo/app/";
 
@@ -29,7 +29,7 @@ public class RetrofitService {
                     .setLevel(HttpLoggingInterceptor.Level.BASIC))//
             .addNetworkInterceptor(new LogInterceptor())//
             .writeTimeout(ConstParams.WRITE_TIMEOUT, TimeUnit.SECONDS)
-            .connectTimeout(ConstParams.CONNNET_TIMEOUT, TimeUnit.SECONDS)
+            .connectTimeout(ConstParams.CONNNCET_TIMEOUT, TimeUnit.SECONDS)
             .readTimeout(ConstParams.READ_TIMEOUT, TimeUnit.SECONDS)
             .build();
 

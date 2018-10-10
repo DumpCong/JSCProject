@@ -1,6 +1,8 @@
 package com.jinshangcheng.net;
 
 
+import com.jinshangcheng.bean.LoginBean;
+
 import io.reactivex.Observable;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
@@ -17,13 +19,12 @@ public interface NetApi {
      *
      * @param workerCode
      * @param password
-     * @param type
-     * @return
+     * @return bean
      */
     @FormUrlEncoded
     @POST("login")
-    Observable<Object> login(@Field("content") String content,
-                             @Field("uuid") String uuid);
+    Observable<LoginBean> login(@Field("workerCode") String workerCode,
+                                @Field("password") String password);
 
 
 }
