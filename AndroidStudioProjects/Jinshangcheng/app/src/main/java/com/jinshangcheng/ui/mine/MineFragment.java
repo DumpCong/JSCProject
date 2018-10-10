@@ -1,22 +1,18 @@
 package com.jinshangcheng.ui.mine;
 
 import android.content.Context;
-import android.support.v4.view.ViewPager;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 
 import com.jinshangcheng.R;
-import com.jinshangcheng.adapter.CarListPagerAdapter;
 import com.jinshangcheng.base.BaseFragment;
-import com.jinshangcheng.bean.Car;
 import com.jinshangcheng.ui.car.CarContract;
 import com.jinshangcheng.ui.car.CarPresenter;
-import com.jinshangcheng.utils.DensityUtil;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 import butterknife.Unbinder;
 
 
@@ -27,6 +23,7 @@ public class MineFragment extends BaseFragment implements CarContract.IView {
 
 
     private static MineFragment mineFragment;
+    Unbinder unbinder;
 
     private CarContract.IPresenter mPresenter;
 
@@ -96,4 +93,8 @@ public class MineFragment extends BaseFragment implements CarContract.IView {
 
     }
 
+
+    @OnClick(R.id.tv_people)
+    public void onViewClicked() {
+    }
 }

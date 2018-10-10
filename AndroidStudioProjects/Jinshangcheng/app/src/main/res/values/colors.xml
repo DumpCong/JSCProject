@@ -19,6 +19,8 @@
     <!--**************** 按钮色*********************-->
     <color name="btnBg">#3AA9F3</color>
     <color name="btnDarkBg">#2c86c3</color>
+    <!--***************  分割线*******************-->
+    <color name="dividerColor">#e1e1e1</color>
 
 
 
