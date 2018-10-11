@@ -2,13 +2,16 @@ package com.jinshangcheng.ui.square;
 
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.jinshangcheng.R;
 import com.jinshangcheng.base.BaseFragment;
+
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+import butterknife.Unbinder;
 
 /**
  * 广场模块
@@ -48,4 +51,16 @@ public class SquareFragment extends BaseFragment {
 
     }
 
+
+    @OnClick({R.id.showLoading, R.id.hideLoading})
+    public void onViewClicked(View view) {
+        switch (view.getId()) {
+            case R.id.showLoading:
+                showLoading();
+                break;
+            case R.id.hideLoading:
+                dismissLoading();
+                break;
+        }
+    }
 }

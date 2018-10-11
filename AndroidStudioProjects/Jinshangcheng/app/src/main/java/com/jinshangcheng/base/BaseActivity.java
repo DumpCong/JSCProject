@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.jinshangcheng.utils.ActivityUtils;
+import com.jinshangcheng.widget.MyDialog;
 
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
@@ -16,6 +17,7 @@ import butterknife.Unbinder;
 public abstract class BaseActivity extends AppCompatActivity {
     protected Context mContext;
     private Unbinder unbind;
+    private MyDialog loading;
 
     /**
      * 初始化布局
@@ -71,11 +73,19 @@ public abstract class BaseActivity extends AppCompatActivity {
 
     //显示loading界面
     public void showLoading() {
+        if (loading == null) {
+            loading = new MyDialog(this);
+        }
+
+        loading.show();
 
     }
 
     //隐藏loading界面
     public void dismissLoading() {
+        if (loading != null && loading.isShowing()) {
+            loading.hide();
+        }
 
     }
 }

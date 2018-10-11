@@ -43,6 +43,22 @@
         <item name="android:background">@drawable/btn_background</item>
         <item name="android:textColor">@color/white</item>
     </style>
+    <!--LoadingDialog样式-->
+    <style name="AlertDialogStyle" parent="Theme.AppCompat.Dialog">
+        <!--背景透明-->
+        <item name="android:windowBackground">@color/darkBg</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <!--悬浮在Activity上-->
+        <item name="android:windowIsFloating">true</item>
+        <!--边框-->
+        <item name="android:windowFrame">@null</item>
+        <!--dialog以外的模糊效果-->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!--没有标题栏-->
+        <item name="android:windowNoTitle">true</item>
+        <!--半透明-->
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
 
     <!--我的模块 列表条目-->
 
